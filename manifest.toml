@@ -1,1 +1,32 @@
+packaging_format = 2
+id = "crowdsec"
+name = "CrowdSec"
+description.en = "A security engine curated by the community"
+description.fr = "Un moteur de sécurité vérifié par la communauté"
 
+version = "1.7.6~ynh1"
+
+maintainers = ["petitmote"]
+
+[upstream]
+license = "MIT"
+website = "https://www.crowdsec.net/"
+code = "https://github.com/crowdsecurity/crowdsec"
+admindoc = "https://doc.crowdsec.net/"
+
+[integration]
+yunohost = ">= 12.1"
+helpers_version = "2.1"
+architectures = ["amd64"]
+multi_instance = false
+ldap = "not_relevant"
+sso = "not_relevant"
+disk = "100M"
+ram.build = "100M"
+ram.runtime = "200M"
+
+[resources]
+    [resources.apt]
+    extras.crowdsec.repo = "deb https://packagecloud.io/crowdsec/crowdsec/any/ any main"
+    extras.crowdsec.key = "https://packagecloud.io/crowdsec/crowdsec/gpgkey"
+    extras.crowdsec.packages = ["crowdsec", "crowdsec-firewall-bouncer-nftables"]
