@@ -3,4 +3,4 @@
 # This is where we load the official YunoHost helpers
 source /usr/share/yunohost/helpers
 
-ynh_script_progression --message="Nothing else to do" --weight=1
+ynh_script_progression "Nothing else to do"
