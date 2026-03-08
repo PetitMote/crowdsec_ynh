@@ -3,13 +3,6 @@
 # This is where we load the official YunoHost helpers
 source /usr/share/yunohost/helpers
 
-#=================================================
-# DOWNLOAD, CHECK AND UNPACK SOURCE
-# This is where we would usually fetch the .tar.gz archive 
-# from the upstream and extract it into our local install dir
-#=================================================
-# At the beginning of each major operation, we call this helper
-# that creates a progress bar
 ynh_script_progression --message="Installing from repositories" --weight=1
 
 apt-get install crowdsec crowdsec-firewall-bouncer-nftables
