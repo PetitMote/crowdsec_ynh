@@ -3,6 +3,4 @@
 # This is where we load the official YunoHost helpers
 source /usr/share/yunohost/helpers
 
-ynh_script_progression --message="Uninstalling packages" --weight=1
-
-apt-get remove crowdsec crowdsec-firewall-bouncer-nftables
+ynh_script_progression --message="Nothing else to do" --weight=1
